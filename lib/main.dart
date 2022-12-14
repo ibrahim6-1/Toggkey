@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toggkey/widgest/bg_clipper.dart';
 import 'package:toggkey/widgest/bottom_navbar.dart';
 
 import 'constants/colors.dart';
@@ -19,7 +20,7 @@ class App extends StatelessWidget {
     return Scaffold(
       bottomNavigationBar: BottomAppBar(
         child: BottomNavbar(),
-        color: gemlik,
+        color: oltu,
       ),
       body: Stack(
         children: [
@@ -28,6 +29,20 @@ class App extends StatelessWidget {
               gradient: RadialGradient(
                 radius: 1,
                 colors: [gemlik, oltu],
+              ),
+            ),
+          ),
+          ClipPath(
+            clipper: BgClipper(),
+            child: Container(
+              padding: const EdgeInsets.all(23),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(23),
+                gradient: const LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [gemlik, oltu],
+                ),
               ),
             ),
           ),
