@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:toggkey/lock_state.dart';
+import 'package:toggkey/widgest/animated_button.dart';
 import 'package:toggkey/widgest/bg_clipper.dart';
 import 'package:toggkey/widgest/bottom_navbar.dart';
 
@@ -13,7 +14,7 @@ void main() {
   ));
 }
 
-ValueNotifier<LockState> lockStateNotiifer =ValueNotifier(LockState.locked);
+ValueNotifier<LockState> lockStateNotiifer =ValueNotifier(LockState.unlocked);
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -63,6 +64,7 @@ class App extends StatelessWidget {
                       ],
                     ),
                     Image.asset("images/togg.png", height: 60),
+                    const AnimatedButton(),
                     ValueListenableBuilder(
                       valueListenable: lockStateNotiifer,
                       builder: (context, lockState, _) {

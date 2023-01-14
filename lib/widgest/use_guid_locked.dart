@@ -30,7 +30,7 @@ class UserGuidLocked extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 10),
-          ArrowUp(),
+          // ArrowUp(),
         ],
       ),
     );

@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 
 class ArrowUp extends StatefulWidget {
@@ -45,6 +43,8 @@ class _ArrowUpState extends State<ArrowUp> with SingleTickerProviderStateMixin {
     arrowAnimationController.repeat(reverse: false);
     arrowAnimationController.addListener(() => setState(() {}));
   }
+
+
 
   @override
   Widget build(BuildContext context) {
